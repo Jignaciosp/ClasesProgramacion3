@@ -1,3 +1,4 @@
+///Clase 9
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 import Imagen from './src/Componentes/Imagen/Imagen';
