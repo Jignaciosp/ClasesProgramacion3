@@ -24,5 +24,6 @@ const styles = StyleSheet.create({
     fontSize: 40,
     alignItems: 'center',
     justifyContent: 'center',
+    fontFamily: 'Roboto', 
   }
 });
