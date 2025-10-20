@@ -1,12 +1,12 @@
 import React from 'react';
 import { View, Text, StyleSheet, Pressable } from 'react-native';
 
-function Profile({navigation}) {
+function Profile(props) {
     return (
         <View style={styles.container}>
             <Text style={styles.texto2}  > Estas en Profile </Text>
 
-            <Pressable onPress={ ()=> navigation.navigate('Login')}>
+            <Pressable onPress={ ()=> props.navigation.navigate('Login')}>
                 <Text style={styles.texto3}>Desloguearse</Text>
             </Pressable>`
         </View>
