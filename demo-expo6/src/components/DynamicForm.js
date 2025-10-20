@@ -1,4 +1,3 @@
-// /components/DynamicForm.js
 import React, { Component } from 'react';
 import { View, Text, TextInput, StyleSheet, Pressable } from 'react-native';
 
