@@ -10,7 +10,7 @@ constructor(props) {
     };
 }
 
-onSubmit = () => {
+onSubmit() {
     console.log('Datos de login:', this.state);
 };
 
@@ -37,7 +37,7 @@ render() {
             value={this.state.password}
         />
 
-        <Pressable style={styles.boton} onPress={this.onSubmit}>
+        <Pressable style={styles.boton} onPress={()=>this.onSubmit()}>
             <Text>Login</Text>
         </Pressable>
 

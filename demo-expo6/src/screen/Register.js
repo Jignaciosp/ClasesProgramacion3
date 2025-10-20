@@ -11,7 +11,7 @@ class Register extends Component {
     };
 }
 
-onSubmit = () => {
+onSubmit() {
     console.log('Datos ingresados:', this.state);
 };
 
@@ -46,7 +46,7 @@ render() {
             value={this.state.password}
         />
 
-        <Pressable style={styles.boton} onPress={this.onSubmit}>
+        <Pressable style={styles.boton} onPress={()=>this.onSubmit()}>
             <Text>Registrate</Text>
         </Pressable>
 

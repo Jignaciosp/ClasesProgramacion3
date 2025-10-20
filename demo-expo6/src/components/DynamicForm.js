@@ -9,10 +9,10 @@ constructor(props) {
         comentario: '',
     };
 }
-
-onSubmit = () => {
+onSubmit() {
     console.log('Comentario ingresado:', this.state.comentario);
 };
+
 
 render() {
     return (
@@ -22,13 +22,11 @@ render() {
         <TextInput
             style={styles.field}
             placeholder="Comentario"
-            multiline={true}
-            numberOfLines={4}
             onChangeText={text => this.setState({ comentario: text })}
             value={this.state.comentario}
         />
 
-        <Pressable style={styles.boton} onPress={this.onSubmit}>
+        <Pressable style={styles.boton} onPress={()=>this.onSubmit()}>
             <Text>Enviar</Text>
         </Pressable>
 
