@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { View, Text, TextInput, StyleSheet, Pressable } from 'react-native';
+import { auth } from '../firebase/config';
+
 
 class Register extends Component {
     constructor(props) {
@@ -11,8 +13,21 @@ class Register extends Component {
     };
 }
 
+register(email, pass){
+    auth.createUserWithEmailAndPassword(email, pass)
+        .then( response => {
+            this.setState({registered: true});
+            this.props.navigation.navigate('Login');
+        })     
+        .catch( error => {
+            this.setState({error: 'Fallo en el registro.'})
+        })
+};
+
 onSubmit() {
     console.log('Datos ingresados:', this.state);
+    this.register(this.state.email, this.state.password)
+
 };
 
 
